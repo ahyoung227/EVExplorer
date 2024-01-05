@@ -1,0 +1,1 @@
+# vue3-nuxt-pinia-project
