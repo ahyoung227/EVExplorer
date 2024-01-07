@@ -2,7 +2,7 @@ import { defineStore } from "pinia";
 import { v4 as uuid } from "uuid";
 
 export interface Car {
-  id: string;
+  id: number;
   make: string;
   model: string;
   price: number;
@@ -13,6 +13,8 @@ export interface Car {
 
 export interface CarState {
   cars: Car[];
+  searchCars: Car[];
+  curPageCars: Car[];
 }
 
 export interface CarAdd {
@@ -28,34 +30,53 @@ export interface CarUpdate {
 export const useCarStore = defineStore("carStore", {
   state: (): CarState => ({
     cars: [],
+    searchCars: [],
+    curPageCars: []
   }),
   getters: {
-    getById:
-      (state: CarState) =>
-      (id: string): Car => {
-        return state.cars.find((car: Car) => car.id === id)!;
-      },
+    getById:      
+      (state: CarState) => 
+        (id: number): Car => {
+          return state.cars.find((car: Car) => car.id === id)!;
+    }, 
     getCarsByHighIncentive: (state: CarState): Car[] =>
-      [...state.cars].sort((a: Car, b: Car) => b.horsepower - a.horsepower)
+      [...state.cars].sort((a: Car, b: Car) => b.horsepower - a.horsepower),
+    getMoreCar: 
+      (state: CarState) => 
+        (offset: number, limit: number) => {
+          state.curPageCars = state.searchCars.slice(0, offset+limit);
+        }
   },
   actions: {
-    add(newCar: CarAdd) {
-      const car: Car = {
-        id: uuid(),
-        model: "model 2",
-        price: 1000,
-        mileage: 13000,
-        image: "",
-        ...newCar
-      };
-      this.cars.push(car);
+    setAllCarData(data: Car[]) {
+      this.cars = data;
+      this.searchCars = data;
     },
-    remove(id: string) {
-      this.cars = this.cars.filter((car) => car.id != id);
+    async searchByMake(make: string) {
+      this.searchCars = this.cars.slice();
+      this.searchCars.filter((car: Car) => car.make.includes(make));
     },
-    update(id: string, carUpdate: CarUpdate) {
-      const index = this.cars.findIndex(car=> car.id === id);
-      this.cars[index] = { ...this.cars[index], ...carUpdate };
-    },
+    async searchByModel(model: string) {
+      this.cars = this.cars.filter((car: Car) => car.model === model);
+    }
+    // add(newCar: CarAdd) {
+    //   const car: Car = {
+    //     id: uuid(),
+    //     model: "model 2",
+    //     price: 1000,
+    //     mileage: 13000,
+    //     image: "",
+    //     ...newCar
+    //   };
+    //   this.cars.push(car);
+    // },
+    // remove(id: string) {
+    //   this.cars = this.cars.filter((car) => car.id != id);
+    // },
+    // update(id: string, carUpdate: CarUpdate) {
+    //   const index = this.cars.findIndex(car=> car.id === id);
+    //   this.cars[index] = { ...this.cars[index], ...carUpdate };
+    // },
   },
 });
+
