@@ -14,7 +14,6 @@ export interface Car {
 export interface CarState {
   cars: Car[];
   searchCars: Car[];
-  curPageCars: Car[];
 }
 
 export interface CarAdd {
@@ -30,8 +29,7 @@ export interface CarUpdate {
 export const useCarStore = defineStore("carStore", {
   state: (): CarState => ({
     cars: [],
-    searchCars: [],
-    curPageCars: []
+    searchCars: []
   }),
   getters: {
     getById:      
@@ -39,25 +37,30 @@ export const useCarStore = defineStore("carStore", {
         (id: number): Car => {
           return state.cars.find((car: Car) => car.id === id)!;
     }, 
-    getCarsByHighIncentive: (state: CarState): Car[] =>
-      [...state.cars].sort((a: Car, b: Car) => b.horsepower - a.horsepower),
     getMoreCar: 
       (state: CarState) => 
         (offset: number, limit: number) => {
-          state.curPageCars = state.searchCars.slice(0, offset+limit);
+          return state.searchCars.slice(0, offset+limit);
         }
   },
   actions: {
     setAllCarData(data: Car[]) {
       this.cars = data;
-      this.searchCars = data;
-    },
-    async searchByMake(make: string) {
       this.searchCars = this.cars.slice();
-      this.searchCars.filter((car: Car) => car.make.includes(make));
     },
-    async searchByModel(model: string) {
-      this.cars = this.cars.filter((car: Car) => car.model === model);
+    searchByWord(word: string) {
+      this.searchCars = this.cars.slice();
+      this.searchCars = this.searchCars.filter((car: Car) => {
+        return car.make.toLowerCase().startsWith(word.toLowerCase()) || car.model.toLowerCase().startsWith(word.toLowerCase());
+      }
+      );
+    },
+    sortBy() {
+        this.searchCars = this.cars.slice();
+        this.searchCars.sort((a: Car, b: Car) => b.horsepower - a.horsepower);
+    },
+    setDefaultCarData() {
+      this.searchCars = this.cars.slice();
     }
     // add(newCar: CarAdd) {
     //   const car: Car = {
