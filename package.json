@@ -12,7 +12,8 @@
     "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:js && yarn lint:prettier",
-    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+    "build-css": "tailwindcss build assets/css/tailwind.css -o public/style.css"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
@@ -36,6 +37,7 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.10.3",
+    "lodash": "^4.17.21",
     "pinia": "^2.1.7",
     "uuid": "^9.0.1"
   }
