@@ -7,15 +7,14 @@
             <p>{{ car.make }}</p>
         </div> 
         <NuxtLink to="/">
-            <button class="btn border-t-neutral-500">
-                <span class="text-primary text-lg">Back to the list</span>
+            <button class="btn bg-secondary border-t-neutral-500">
+                <span class="text-lg">Back to the list</span>
             </button>
         </NuxtLink>
     </div>
 </template>
 
 <script setup lang="ts">
-    import CarCard from "~/components/CarCard.vue";
     import { storeToRefs } from 'pinia';
     import { useCarStore } from "../../store/car";
     const route = useRoute();
