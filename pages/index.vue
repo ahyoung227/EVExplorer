@@ -1,26 +1,33 @@
 <template>
-    <div>
-        <h2>Explore</h2>
-        <SearchBar v-model="searchword" @search="searchCar" :error="error" />
-        <div>Filtered By </div>
-        <div>Sort by </div>
-        <div v-for="(car, index) in store.curPageCars" :key="index">
-            <CarCard :car = "car" />
-        </div>
-        <div class="p-6 mx-auto text-center mb-8">
-            <button class="outline outline-offset-2 outline-2" @click ="loadMoreCar">
-                Fetch More
-            </button>
-        </div>
+    <div class="sm:flex sm:justify-center">
+        <main class="main max-w-screen-xl">
+                <SearchBar v-model="searchword" @search="searchCar" :error="error" />
+                <CarFilter />
+                <CarCardList :car="car" />
+
+                <div class="p-6 mx-auto text-center mb-8">
+                    <button class="outline outline-offset-2 outline-2" @click ="loadMoreCar">
+                        Load More
+                    </button>
+                </div>
+
+        </main>
     </div>
 </template>
 
 <script setup lang="ts">
-    import CarCard from "~/components/CarCard.vue";
-    import { useCarStore } from "../store/car";
     import { ref } from 'vue';
+    import CarCardList from '../components/car/card/CarCardList.vue';
+    import CarFilter from '~/components/CarFilter.vue';
     import SearchBar from "~/components/SearchBar.vue";
+    import { useCarStore } from "../store/car";
     const store = useCarStore();
+
+    const LIMIT = 6;
+    const OFFSET = 0;
+
+    const offset = ref(OFFSET);
+    const limit = ref(LIMIT);
 
     const searchword = ref("");
     const error = ref(false);
@@ -29,28 +36,21 @@
             error.value = true;
             return;
         } 
-        store.searchByMake((searchword.value));
-        searchword.value = "";
+        store.searchByWord((searchword.value));
         offset.value = OFFSET;
         limit.value = LIMIT;
         store.getMoreCar(offset.value, limit.value);
     }
-    const LIMIT = 6;
-    const OFFSET = 0;
 
-    const offset = ref(OFFSET);
-    const limit = ref(LIMIT); 
     const loadMoreCar = () => {
         offset.value += LIMIT;
         store.getMoreCar(offset.value, limit.value);
     }
 
-    const { data } = await useAsyncData(
-        'cars',
-        () => $fetch("https://freetestapi.com/api/v1/cars")
-    );
-    store.setAllCarData(data);
-    store.getMoreCar(offset.value, limit.value);
+    const sortBy = () => {
+        store.sortBy();
+    }
+
 
 </script>
 
