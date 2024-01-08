@@ -7,13 +7,17 @@
 }
 
 .card {
-    @apply bg-gray-100 shadow-xl rounded-md p-4 m-2;
+    @apply bg-white rounded-md overflow-hidden p-4 sm:m-1 m-3 shadow;
 }
 
 .btn {
-    @apply bg-secondary py-1 px-2 rounded-sm text-lg;
+    @apply text-gray-100 py-1 px-2 rounded-lg text-lg border-t-neutral-500;
 }
 
 .card-image {
-    @apply h-20
+    @apply w-full h-52 md:h-32 object-fill;
+}
+
+.card-base-text {
+    @apply text-base text-gray-700 font-light;
 }
