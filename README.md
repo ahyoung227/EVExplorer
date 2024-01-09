@@ -1,4 +1,4 @@
-# Project Summary
+# EVExplorer Project
 
 ## Goal
 The primary goal of this project is to gain hands-on experience with new frameworks, experimenting with project structuring and exploring the intricacies of their adoption. This endeavor focuses on delving into the functionalities of upgraded frameworks, particularly emphasizing the creation of high-quality, reusable code and ensuring effective communication throughout the development process. 
@@ -35,13 +35,12 @@ January 5, 2024 ~ to January 8, 2024 (Ongoing)
 [Link to Figma Board](https://www.figma.com/file/ntlJSVylNqga6xr3RFJFOH/EVlife?type=design&node-id=0%3A1&mode=design&t=ymvDuPTuryRJ1RFp-1)
 
 ## Demo
-- [Main Page Demo](insert_main_page_gif_link)
-- [Car Detail Page Demo](insert_car_detail_page_gif_link)
-- [Detail Page Demo](insert_detail_page_gif_link)
-- [Responsive Design Demo](insert_responsive_design_gif_link)
+- [Main Page Demo]()
+- [Car Detail Page Demo]()
+- [Responsive Design Demo]()
 
 ## Closing Remarks and Limitations
-The use of a fake car API restricts the representation of electric car details, actual incentives, and the ability to make post or update requests.
+This project is solely composed of frontend development, lacking a seamless integration with backend functionalities. The use of a fake car API limits the representation of electric car details, actual incentives, and the ability to make post or update requests. Key aspects like pagination, update, and post requests were not implemented, relying on frontend logic for sorting and searching. The project assumes the presence of backend support for features like actual incentives and personalized loan information, which were not provided. The information from the car fake API can be found here.
 
 # Installation
 
