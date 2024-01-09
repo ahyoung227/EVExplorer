@@ -21,3 +21,7 @@
 .card-base-text {
     @apply text-base text-gray-700 font-light;
 }
+
+.search-bar {
+    @apply block w-full p-2 ps-10 text-sm text-gray-900 border-b border-gray-200 focus:border-b-gray-700 dark:placeholder-gray-400 dark:text-gray-900 dark:focus:ring-gray-500;
+}
