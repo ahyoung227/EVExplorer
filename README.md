@@ -35,9 +35,9 @@ January 5, 2024 ~ to January 8, 2024 (Ongoing)
 [Link to Figma Board](https://www.figma.com/file/ntlJSVylNqga6xr3RFJFOH/EVlife?type=design&node-id=0%3A1&mode=design&t=ymvDuPTuryRJ1RFp-1)
 
 ## Demo
-- [Main Page Demo](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/Main-page.gif)
-- [Car Detail Page Demo](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/detail-page.gif)
-- [Responsive Design Demo](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/reponsive-design.gif)
+- [Main Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/Main-page.gif)
+- [Car Detail Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/detail-page.gif)
+- [Responsive Design Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/reponsive-design.gif)
 
 ## Closing Remarks and Limitations
 This project is solely composed of frontend development, lacking a seamless integration with backend functionalities. The use of a fake car API limits the representation of electric car details, actual incentives, and the ability to make post or update requests. Key aspects like pagination, update, and post requests were not implemented, relying on frontend logic for sorting and searching. The project assumes the presence of backend support for features like actual incentives and personalized loan information, which were not provided. The information from the car fake API can be found here.
