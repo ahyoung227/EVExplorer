@@ -36,7 +36,7 @@
 
     let debouncedSearch : void = _.debounce(() => {
         emit('search');
-    }, 2000);
+    }, 1000);
 
     const onInput : void = () => {
         debouncedSearch();

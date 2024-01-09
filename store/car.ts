@@ -52,28 +52,28 @@ export const useCarStore = defineStore("carStore", {
     },
   },
   actions: {
-    setAllCarData(data: Car[]) {
+    setAllCarData(data: Car[]) : void {
       this.cars = data;
       this.setDefaultCarData();
     },
-    searchByWord(word: string) {
+    searchByWord(word: string) : Car[] | void {
       this.setDefaultCarData()
       this.searchCars = this.searchCars.filter((car: Car) => {
         return car.make.toLowerCase().startsWith(word.toLowerCase()) || car.model.toLowerCase().startsWith(word.toLowerCase());
       }
       );
     },
-    sortBy(selected: string) {
+    sortBy(selected: string) : void {
         this.setDefaultCarData();
         this.searchCars.sort((a: Car, b: Car) => b.horsepower - a.horsepower);
     },
-    setDefaultCarData() {
+    setDefaultCarData() : void {
       this.searchCars = this.cars.slice();
     },
     setCurOffset(val: number) {
       this.curOffset = val;
     },
-    setToDefaultPage() {
+    setToDefaultPage() : void {
       this.setDefaultCarData();
       this.setCurOffset(LIMIT);
     }

@@ -25,7 +25,7 @@
         car: Car
     }>();
 
-    const carImage = await import(`../../../assets/mockCarImages/${car.make}.png`);
+    const carImage = await import(`../../assets/mockCarImages/${car.make}.png`);
     
 </script>
 

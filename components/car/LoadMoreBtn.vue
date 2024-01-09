@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-    import { useCarStore, LIMIT } from "../store/car";
+    import { useCarStore, LIMIT } from "../../store/car";
 
     const store : ReturnType<typeof useCarStore> = useCarStore();
     const loadMoreCar : void = () => {

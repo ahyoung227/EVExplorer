@@ -11,22 +11,19 @@
 
 <script setup lang="ts">
     import { ref } from 'vue';
-    import CarCardList from '../components/car/card/CarCardList.vue';
-    import CarFilter from '~/components/CarFilter.vue';
+    import CarCardList from '../components/car/CarCardList.vue';
+    import CarFilter from '~/components/car/CarFilter.vue';
     import { useCarStore, LIMIT } from "../store/car";
-    import SearchBar from "~/components/SearchBar.vue";
-    import LoadMoreBtn from "~/components/LoadMoreBtn.vue";
+    import SearchBar from "~/components/car/SearchBar.vue";
+    import LoadMoreBtn from "~/components/car/LoadMoreBtn.vue";
 
     const store : ReturnType<typeof useCarStore> = useCarStore();
     const searchword = ref("");
 
+    //TODO: it needs to be seperated
     const searchCar : void = () => {
         store.searchByWord(searchword.value);
         store.setCurOffset(LIMIT);
-    }
-
-    const loadMoreCar : void = () => {
-        store.setCurOffset(store.getCurOffset() + LIMIT);
     }
     store.setToDefaultPage();
     store.getMoreCar();

@@ -8,6 +8,8 @@ January 5, 2024 ~ to January 8, 2024 (Ongoing)
 
 ## Functional Requirements
 
+The idea for Functional Requirements came from the design suggestion for the 'evLife' software. While contemplating what to improve in the current app, I thought about it from the perspective of a user looking to buy an electric car. Rather than searching for brands or models one by one, I'd prefer considering and choosing from various options. Thus, I came up with the idea of 'ev cards.' Even though the design lacks incentives and personalized options, I believe most of the ideas are encapsulated in the functional requirements.
+
 ### View EV Information:
 - Users can access a comprehensive list of EVs, providing detailed information about incentives, loans, EVLife Loan options, and fuel savings.
 

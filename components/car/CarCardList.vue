@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
     import CarCard from "./CarCard.vue";
-    import { useCarStore } from "../store/car";
+    import { useCarStore } from "../../store/car";
     const store : ReturnType<typeof useCarStore> = useCarStore();
 </script>
 

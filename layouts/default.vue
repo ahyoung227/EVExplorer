@@ -31,15 +31,21 @@
     import { useCarStore, LIMIT } from "../store/car";
     import { ref } from 'vue';
 
-    const store : ReturnType<typeof useCarStore> = useCarStore();
+    //TODO: need to be seperated(reponsive nav)
+    const menuVisible = ref(false) as boolean;
+    const toggleMenu : void = () => {
+        menuVisible.value = !menuVisible.value;
+    };
 
+    // init all car data
+    const store : ReturnType<typeof useCarStore> = useCarStore();
     const { data } : Car[] = await useAsyncData(
         'cars',
         () => $fetch("https://freetestapi.com/api/v1/cars")
     );
-
     store.setAllCarData(data);
 
+    //init page rendering
     const handleDefault :void = () => {
         store.setToDefaultPage()
         store.getMoreCar();

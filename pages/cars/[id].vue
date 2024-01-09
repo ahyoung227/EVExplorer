@@ -8,19 +8,22 @@
                 <p>Make: {{ car.make }}</p>
                 <p>Model : {{ car.make }}</p>
             </div>
+
             <UserInfoForm />
             <NuxtLink to="/">
                 <button type="submit" class="text-white bold bg-secondary hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg w-full sm:w-auto px-5 py-1.5 text-center dark:bg-secondary dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Back to the list
                 </button>
-            </NuxtLink>
+        </NuxtLink>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
     import { storeToRefs } from 'pinia';
+    import UserInfoForm from '../../components/car/UserInfoForm.vue';
     import { useCarStore } from "../../store/car";
+
     const route = useRoute();
     const carStore = useCarStore();
     const car = reactive<Car[]>(carStore.getById(parseInt(route.params.id)));
