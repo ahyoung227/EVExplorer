@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
   app: {
     head: {
+      title: 'EVExplorer',
       link: [
         {
           rel: 'stylesheet',
