@@ -1,3 +1,4 @@
+```mermaid
 # EVExplorer Project
 
 ## Goal
@@ -33,11 +34,8 @@ The idea for Functional Requirements came from the design suggestion for the 'ev
 - Vite
 - Vitest
 
-## Figma Board
-[Link to Figma Board](https://www.figma.com/file/ntlJSVylNqga6xr3RFJFOH/EVlife?type=design&node-id=0%3A1&mode=design&t=ymvDuPTuryRJ1RFp-1)
-
 ## Demo
-- [Main Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/Main-page.gif)
+- [Main Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/Mainpage.gif?raw=true)
 - [Car Detail Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/detail-page.gif)
 - [Responsive Design Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/reponsive-design.gif)
 
@@ -120,4 +118,4 @@ bun run preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
-
+```
