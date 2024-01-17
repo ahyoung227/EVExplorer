@@ -35,18 +35,17 @@ The idea for Functional Requirements came from the design suggestion for the 'ev
 - Vitest
 
 ## Demo
--  Main page
+-  Main page<br>
   ![Main Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/Mainpage.gif?raw=true) 
 
+- Car Detail Page<br>
+  ![Car Detail Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/detailpage.gif?raw=true)
 
-- Car Detail Page
-![Car Detail Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/detailpage.gif?raw=true)
-
-- Responsive Design
-  - Before
+- Responsive Design<br>
+  - Before<br>
 ![Before Responsive Design Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/before-responsive.gif?raw=true)
 
-  - After
+  - After<br>
 ![Responsive Design Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/reponsivedesign.gif?raw=true)
 
 # Project Management with Trello
