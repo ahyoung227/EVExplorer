@@ -1,4 +1,4 @@
-```mermaid
+
 # EVExplorer Project
 
 ## Goal
@@ -35,9 +35,35 @@ The idea for Functional Requirements came from the design suggestion for the 'ev
 - Vitest
 
 ## Demo
-- [Main Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/Mainpage.gif?raw=true)
-- [Car Detail Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/detail-page.gif)
-- [Responsive Design Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/reponsive-design.gif)
+-  Main page
+  ![Main Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/Mainpage.gif?raw=true) 
+
+
+- Car Detail Page
+![Car Detail Page Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/detailpage.gif?raw=true)
+
+- Responsive Design
+  - Before
+![Before Responsive Design Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/before-responsive.gif?raw=true)
+
+  - After
+![Responsive Design Demo-gif](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/reponsivedesign.gif?raw=true)
+
+# Project Management with Trello
+
+This README documents the project management approach I followed using Trello over a span of 3 days.
+
+## Trello Board Setup
+
+To manage the project effectively, I created a Trello board organized with the following lists:
+
+1. **To Do**: Tasks to be done before starting
+2. **In Progress**: Items currently being worked on
+3. **Testing in progress**: Testing stage
+2. **Done**: Items currently being worked on
+
+## Trello Board Screenshot
+![Trello Board](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/evlife-progress.png?raw=true)
 
 ## Closing Remarks and Limitations
 This project is solely composed of frontend development, lacking a seamless integration with backend functionalities. The use of a fake car API limits the representation of electric car details, actual incentives, and the ability to make post or update requests. Key aspects like pagination, update, and post requests were not implemented, relying on frontend logic for sorting and searching. The project assumes the presence of backend support for features like actual incentives and personalized loan information, which were not provided. The information from the car fake API can be found here.
@@ -118,4 +144,3 @@ bun run preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
-```
