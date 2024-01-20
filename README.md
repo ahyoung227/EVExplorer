@@ -7,9 +7,11 @@ The primary goal of this project is to gain hands-on experience with new framewo
 ## Project Period
 January 5, 2024 ~ to January 8, 2024 (Ongoing)
 
+## Figma Design
+
 ## Functional Requirements
 
-The idea for Functional Requirements came from the design suggestion for the 'evLife' software. While contemplating what to improve in the current app, I thought about it from the perspective of a user looking to buy an electric car. Rather than searching for brands or models one by one, I'd prefer considering and choosing from various options. Thus, I came up with the idea of 'ev cards.' Even though the design lacks incentives and personalized options, I believe most of the ideas are encapsulated in the functional requirements.
+The idea for Functional Requirements came from the design suggestion for the 'EVLife' software. While contemplating what to improve in the current app, I thought about it from the perspective of a user looking to buy an electric car. Rather than searching for brands or models one by one, I'd prefer considering and choosing from various options. Thus, I came up with the idea of 'ev cards.' Even though the design lacks incentives and personalized options, I believe most of the ideas are encapsulated in the functional requirements.
 
 ### View EV Information:
 - Users can access a comprehensive list of EVs, providing detailed information about incentives, loans, EVLife Loan options, and fuel savings.
@@ -65,7 +67,7 @@ To manage the project effectively, I created a Trello board organized with the f
 ![Trello Board](https://github.com/ahyoung227/EVExplorer/blob/main/assets/demo/evlife-progress.png?raw=true)
 
 ## Closing Remarks and Limitations
-This project is solely composed of frontend development, lacking a seamless integration with backend functionalities. The use of a fake car API limits the representation of electric car details, actual incentives, and the ability to make post or update requests. Key aspects like pagination, update, and post requests were not implemented, relying on frontend logic for sorting and searching. The project assumes the presence of backend support for features like actual incentives and personalized loan information, which were not provided. The information from the car fake API can be found here.
+This project is solely composed of frontend development, lacking a seamless integration with backend functionalities. The use of a fake car API limits the representation of electric car details, actual incentives, and the ability to make post or update requests. Key aspects like pagination, update, and post requests were not implemented, relying on frontend logic for sorting and searching. The project assumes the presence of backend support for features like actual incentives and personalized loan information, which were not provided. The information from Car Fake API can be found [here](https://freetestapi.com/apis/cars).
 
 # Installation
 
