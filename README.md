@@ -7,8 +7,6 @@ The primary goal of this project is to gain hands-on experience with new framewo
 ## Project Period
 January 5, 2024 ~ to January 8, 2024 (Ongoing)
 
-## Figma Design
-
 ## Functional Requirements
 
 The idea for Functional Requirements came from the design suggestion for the 'EVLife' software. While contemplating what to improve in the current app, I thought about it from the perspective of a user looking to buy an electric car. Rather than searching for brands or models one by one, I'd prefer considering and choosing from various options. Thus, I came up with the idea of 'ev cards.' Even though the design lacks incentives and personalized options, I believe most of the ideas are encapsulated in the functional requirements.
@@ -27,6 +25,9 @@ The idea for Functional Requirements came from the design suggestion for the 'EV
 
 ### Responsive Design:
 - The application features a responsive design, ensuring an optimal user experience across various devices.
+
+### Figma Board
+[Link](https://www.figma.com/file/ntlJSVylNqga6xr3RFJFOH/EVlife?type=design&node-id=0-1&mode=design&t=hXIiAteowr3mrWlZ-0)
 
 ## Tech Stack
 - JavaScript/TypeScript
